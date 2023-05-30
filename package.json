@@ -1,0 +1,18 @@
+{
+  "name": "timetrack",
+  "version": "1.0.0",
+  "description": "Example data-derived application.",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "PM",
+  "license": "ISC",
+  "dependencies": {
+    "nanoid": "^3.3.6"
+  },
+  "devDependencies": {
+    "eslint": "^8.41.0",
+    "jest": "^29.5.0"
+  }
+}
