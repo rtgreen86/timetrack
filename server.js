@@ -1,5 +1,7 @@
 const http = require('node:http');
 
+require('./lib/TestData');
+
 const index = require('./controllers/index');
 const notFound = require('./controllers/404');
 
