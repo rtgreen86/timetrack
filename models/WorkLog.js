@@ -1,5 +1,4 @@
 const { nanoid } = require('nanoid');
-const Work = require('./Work');
 
 module.exports = class WorkLog {
   #list;
@@ -17,7 +16,12 @@ module.exports = class WorkLog {
   }
 
   post(record) {
-    return this.#add(new Work(nanoid(), record));
+    return this.#add({
+      id: nanoid(),
+      title: record.title,
+      hours: record.hours,
+      archived: record.archived || false
+    });
   }
 
   delete(id) {
@@ -27,7 +31,12 @@ module.exports = class WorkLog {
 
   put(record) {
     this.delete(record.id);
-    return this.#add(new Work(record.id, record));
+    return this.#add({
+      id: record.id,
+      title: record.title,
+      hours: record.hours,
+      archived: record.archived || false
+    });
   }
 
   #add(work) {

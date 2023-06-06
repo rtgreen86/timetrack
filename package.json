@@ -4,7 +4,8 @@
   "description": "Example data-derived application.",
   "main": "server.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node ."
   },
   "author": "PM",
   "license": "ISC",
